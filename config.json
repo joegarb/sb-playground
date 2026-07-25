@@ -1,0 +1,40 @@
+{
+  "UserConfig": {
+    "Namespaces": [
+      {
+        "Name": "sbemulatorns",
+        "Queues": [],
+        "Topics": [
+          {
+            "Name": "design-changes",
+            "Properties": {
+              "DefaultMessageTimeToLive": "PT1H",
+              "RequiresDuplicateDetection": false
+            },
+            "Subscriptions": [
+              {
+                "Name": "audit-log",
+                "Properties": {
+                  "DeadLetteringOnMessageExpiration": true,
+                  "MaxDeliveryCount": 10,
+                  "LockDuration": "PT30S"
+                }
+              },
+              {
+                "Name": "downstream-checks",
+                "Properties": {
+                  "DeadLetteringOnMessageExpiration": true,
+                  "MaxDeliveryCount": 3,
+                  "LockDuration": "PT30S"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Logging": {
+      "Type": "File"
+    }
+  }
+}

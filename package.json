@@ -1,0 +1,21 @@
+{
+  "name": "sb-playground",
+  "version": "1.0.0",
+  "description": "Azure Service Bus topic/subscription playground",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "publish": "tsx src/publisher.ts",
+    "audit": "tsx src/audit-service.ts",
+    "checks": "tsx src/checks-service.ts",
+    "dlq": "tsx src/dlq.ts"
+  },
+  "dependencies": {
+    "@azure/service-bus": "^7.9.5"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.0"
+  }
+}
