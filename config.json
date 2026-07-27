@@ -27,6 +27,25 @@
                   "MaxDeliveryCount": 3,
                   "LockDuration": "PT30S"
                 }
+              },
+              {
+                "Name": "apollo-changes",
+                "Properties": {
+                  "DeadLetteringOnMessageExpiration": true,
+                  "MaxDeliveryCount": 10,
+                  "LockDuration": "PT30S"
+                },
+                "Rules": [
+                  {
+                    "Name": "apollo-only",
+                    "Properties": {
+                      "FilterType": "Sql",
+                      "SqlFilter": {
+                        "SqlExpression": "project = 'apollo'"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           }

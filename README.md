@@ -44,6 +44,7 @@ In separate terminals:
 ```bash
 npm run audit     # consumer on the audit-log subscription
 npm run checks    # consumer on the downstream-checks subscription
+npm run apollo    # consumer on apollo-changes (SQL-filtered: project = 'apollo')
 npm run publish   # publishes 5 events, one of them a poison message
 ```
 
