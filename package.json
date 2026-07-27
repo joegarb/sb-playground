@@ -6,9 +6,9 @@
   "scripts": {
     "build": "tsc",
     "publish": "tsx src/publisher.ts",
-    "audit": "tsx src/audit-service.ts",
-    "checks": "tsx src/checks-service.ts",
-    "apollo": "tsx src/apollo-service.ts",
+    "audit": "tsx src/services/audit-service.ts",
+    "checks": "tsx src/services/checks-service.ts",
+    "apollo": "tsx src/services/apollo-service.ts",
     "dlq": "tsx src/dlq.ts"
   },
   "dependencies": {

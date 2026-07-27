@@ -1,5 +1,5 @@
 import { ServiceBusReceivedMessage } from "@azure/service-bus";
-import { runConsumer } from "./consumer.js";
+import { runConsumer } from "../consumer.js";
 
 // Only receives messages the broker routed here via the subscription's SQL filter
 // (project = 'apollo' in config.json), which matches on applicationProperties — not

@@ -1,5 +1,5 @@
 import { ServiceBusReceivedMessage } from "@azure/service-bus";
-import { runConsumer } from "./consumer.js";
+import { runConsumer } from "../consumer.js";
 
 // Idempotent, append-only audit log. Never throws, so it never dead-letters.
 // At-least-once delivery means the same event can arrive twice, so dedupe on messageId.
