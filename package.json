@@ -12,11 +12,11 @@
     "dlq": "tsx src/dlq.ts"
   },
   "dependencies": {
-    "@azure/service-bus": "^7.9.5"
+    "@azure/service-bus": "^7.10.0"
   },
   "devDependencies": {
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
-    "@types/node": "^26.6.3"
+    "@types/node": "^26.6.6"
   }
 }
